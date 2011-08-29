@@ -76,4 +76,7 @@
   Vector.angleBetween = function(v1, v2) {
     return Math.acos(v1.dot(v2) / (v1.mag() * v2.mag()));
   };
+  if (typeof exports !== "undefined" && exports !== null) {
+    exports.Vector = Vector;
+  }
 }).call(this);

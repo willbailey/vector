@@ -1,4 +1,3 @@
-# Ported from PVector
 class Vector
   x: 0
   y: 0
@@ -49,7 +48,6 @@ class Vector
 
   toString: -> "x:@x, y:@y, z:@z"
   
-# Class Methods
 Vector.dist = (v1, v2)-> v1.dist v2
 
 Vector.dot = (v1, v2)-> v1.dot(v2)
@@ -57,3 +55,5 @@ Vector.dot = (v1, v2)-> v1.dot(v2)
 Vector.cross = (v1, v2)-> v1.cross(v2)
 
 Vector.angleBetween = (v1, v2)-> Math.acos v1.dot(v2) / (v1.mag() * v2.mag())
+
+exports.Vector = Vector if exports? 
