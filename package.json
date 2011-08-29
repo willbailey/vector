@@ -2,10 +2,10 @@
   "author": "Will Bailey <will.bailey@gmail.com> (willbailey.name)",
   "name": "Vector",
   "description": "A port of Processing PVector written in CoffeeScript",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git://github.com/willbailey/springs.git"
+    "url": "git@github.com:willbailey/vector.git"
   },
   "engines": {
     "node": "~v0.4.10"
