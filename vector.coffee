@@ -30,12 +30,23 @@ class Vector
 
   dot: (v)-> @x * v.x + @y * v.y + @z * v.z
 
+  heading2D: -> -Math.atan2 -@y, @x
+
+  limit: (high)-> 
+    if @mag() > high 
+      @normalize()
+      @mult(high)
+
   mag: -> Math.sqrt @x * @x + @y * @y + @z * @z
 
   mult: (v)->
     @x *= v.x
     @y *= v.y
     @z *= v.z
+
+  normalize ->
+      m = @mag()
+      @div m if m > 0
 
   set: (x, y, z)-> [ @x, @y, @z ] = [ x, y, z ]
 

@@ -39,6 +39,15 @@
     Vector.prototype.dot = function(v) {
       return this.x * v.x + this.y * v.y + this.z * v.z;
     };
+    Vector.prototype.heading2D = function() {
+      return -Math.atan2(-this.y, this.x);
+    };
+    Vector.prototype.limit = function(high) {
+      if (this.mag() > high) {
+        this.normalize();
+        return this.mult(high);
+      }
+    };
     Vector.prototype.mag = function() {
       return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
     };
@@ -47,6 +56,13 @@
       this.y *= v.y;
       return this.z *= v.z;
     };
+    normalize(function() {
+      var m;
+      m = this.mag();
+      if (m > 0) {
+        return this.div(m);
+      }
+    });
     Vector.prototype.set = function(x, y, z) {
       var _ref;
       return _ref = [x, y, z], this.x = _ref[0], this.y = _ref[1], this.z = _ref[2], _ref;
