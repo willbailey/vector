@@ -56,13 +56,13 @@
       this.y *= v.y;
       return this.z *= v.z;
     };
-    normalize(function() {
+    Vector.prototype.normalize = function() {
       var m;
       m = this.mag();
       if (m > 0) {
         return this.div(m);
       }
-    });
+    };
     Vector.prototype.set = function(x, y, z) {
       var _ref;
       return _ref = [x, y, z], this.x = _ref[0], this.y = _ref[1], this.z = _ref[2], _ref;

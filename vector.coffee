@@ -44,7 +44,7 @@ class Vector
     @y *= v.y
     @z *= v.z
 
-  normalize ->
+  normalize: ->
       m = @mag()
       @div m if m > 0
 
