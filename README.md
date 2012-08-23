@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/willbailey/vector.png)](http://travis-ci.org/willbailey/vector)
 Port of Processing PVector to CoffeeScript
 
 http://processing.org/reference/PVector.html
